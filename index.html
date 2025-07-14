@@ -10,13 +10,15 @@
     body {
       font-family: 'Inter', sans-serif;
       background: linear-gradient(to bottom, #f2f6ff, #e6ecf5);
-      padding: 2rem;
+      margin: 0;
+      padding-top: 80px; /* spacing for sticky header */
     }
     .container {
       background: #fff;
       padding: 2rem;
       border-radius: 12px;
       box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+      margin-bottom: 4rem;
     }
     h2 {
       margin-top: 2.5rem;
@@ -39,59 +41,15 @@
     .contents a:hover {
       text-decoration: underline;
     }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1 class="text-primary">BRD – Candidate Details Page</h1>
-
-    <div class="contents">
-      <h4>📚 Contents</h4>
-      <a href="#project">Project Description</a>
-      <a href="#business">Business Requirements</a>
-      <a href="#functional">Functional Requirements</a>
-      <a href="#current">Current Process</a>
-      <a href="#acceptance">User Acceptance Criteria</a>
-      <a href="#assumptions">Project Assumptions</a>
-    </div>
-
-    <h2 id="project">📌 Project Description</h2>
-    <ul>
-      <li>Part of a recruitment platform used by hiring managers and recruiters</li>
-      <li>Centralized interface for viewing, tracking, and managing candidates</li>
-      <li>Displays name, resume, and interview details</li>
-      <li>Includes search and filter functionality</li>
-    </ul>
-
-    <h2 id="business">📈 Business Requirements</h2>
-    <ul>
-      <li>Intuitive interface for viewing and managing all candidates</li>
-      <li>Search by name, email, or phone</li>
-      <li>Display key info: name, resume, interview details</li>
-      <li>Enable quick access to resumes and interview links</li>
-      <li>Ensure PII data accuracy and security</li>
-    </ul>
-
-    <h2 id="functional">⚙️ Functional Requirements</h2>
-    <h5>Candidate Listing Table</h5>
-    <ul>
-      <li>10 candidates per page with pagination</li>
-      <li>Columns: Name, Resume, Interview Details</li>
-    </ul>
-    <h5>Search Bar</h5>
-    <ul>
-      <li>Located at the top of the page</li>
-      <li>Supports: name, email, phone number</li>
-    </ul>
-    <h5>Data Handling</h5>
-    <ul>
-      <li>Dynamically loads based on search or pagination</li>
-      <li>Resume column shows PDF icon if uploaded</li>
-      <li>Interview column links to detailed view</li>
-    </ul>
-    <h5>Responsiveness</h5>
-    <ul>
-      <li>Page layout must be responsive across devices</li>
-    </ul>
-
-    <
+    .sticky-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      background-color: #ffffff;
+      border-bottom: 1px solid #dee2e6;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+    .sticky-
